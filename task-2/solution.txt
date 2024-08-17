@@ -1,0 +1,23 @@
+git config --global user.name "aliamgad"
+git config --global user.email "mostafaamgadaboseif@gmail.com"
+git clone https://github.com/aliamgad/Tasks.git
+cd Tasks/
+mkdir task-2
+cd task-2
+touch greeting.txt
+echo hello world >> greeting.txt 
+cd ..
+git add task-2
+git commit -m "Added greeting"
+git checkout -b intro
+cd task-2
+echo I love Git >> greeting.txt 
+cd ..
+git add task-2
+git commit -m "Added I love Git"
+git checkout master
+git log --graph 
+git branch 
+git merge intro
+git tag v1
+git push -u origin master
